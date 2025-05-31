@@ -10,7 +10,12 @@
   <script>
     // ## Array Cardio Day 2
 
-
+    const people = [
+      { name: 'Wes', year: 1988 },
+      { name: 'Kait', year: 1986 },
+      { name: 'Irv', year: 1970 },
+      { name: 'Lux', year: 2015 }
+    ];
 
     const comments = [
       { text: 'Love this!', id: 523423 },
@@ -31,6 +36,15 @@
     });
 
     console.log({isAdult});
+
+      const isEveryAdult = people.every(person => {
+      const currentYear = (new Date()).getFullYear();
+      if ( currentYear - person.year >= 19) {
+        return true;
+      };
+    });
+
+    console.log({isEveryAdult});
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
